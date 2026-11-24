@@ -1,15 +1,14 @@
 package com.pluralsight;
 
-public abstract class Asset implements Valuable{
+import java.util.ArrayList;
+
+public abstract class FixedAsset implements Valuable{
     private String name;
-    private double marketValue;
 
-    public Asset(String name, double marketValue) {
+
+    public FixedAsset(String name) {
         this.name = name;
-        this.marketValue = marketValue;
     }
 
-    public double getValue(){
-        return this.marketValue;
-    }
+    public abstract double getValue();
 }
